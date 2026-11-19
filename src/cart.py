@@ -1,7 +1,7 @@
 def calculate_discount(price, coupon):
     """Return the price after applying a coupon code."""
     if coupon == "SAVE10":
-        return round(price * 1.1, 2)
+        return round(price * 0.9, 2)
     return price
 
 
