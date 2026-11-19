@@ -10,6 +10,7 @@ def cart_total(prices, coupon=None):
     return calculate_discount(sum(prices), coupon)
 
 def apply_shipping(subtotal, free_over=50, flat_fee=5.0):
+    """New function"""
     """Add the flat shipping fee unless the subtotal reaches the free-shipping threshold."""
     if subtotal < 0:
         raise ValueError("subtotal must not be negative")
