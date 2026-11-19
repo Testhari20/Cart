@@ -15,3 +15,8 @@ def apply_shipping(subtotal, free_over=50, flat_fee=5.0):
     if subtotal < 0:
         raise ValueError("subtotal must not be negative")
     return subtotal if subtotal >= free_over else round(subtotal + flat_fee, 2)
+def apply_tax(amount, rate):
+    """Add tax at `rate` (0.2 = 20%), rounded to cents."""
+    if amount < 0 or rate < 0:
+        raise ValueError("amount and rate must not be negative")
+    return round(amount * (1 + rate), 2)
