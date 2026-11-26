@@ -11,3 +11,5 @@ def test_unknown_coupon_keeps_price():
 
 def test_cart_total_applies_coupon():
     assert cart_total([60, 40], "SAVE10") == 90
+
+//testcase
